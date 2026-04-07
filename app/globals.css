@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  background: #0a0a0a;
+  color: #e5e5e5;
+  line-height: 1.7;
+  padding: 2rem 1rem;
+}
+
+.container {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  text-align: center;
+  color: #888;
+  font-size: 0.9rem;
+  margin-bottom: 2.5rem;
+}
+
+.section {
+  margin-bottom: 2.5rem;
+}
+
+.section-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #60a5fa;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #222;
+}
+
+.step {
+  margin-bottom: 1.2rem;
+}
+
+.step-label {
+  font-size: 0.85rem;
+  color: #a3a3a3;
+  margin-bottom: 0.3rem;
+}
+
+.step-label a {
+  color: #60a5fa;
+  text-decoration: none;
+}
+
+.step-label a:hover {
+  text-decoration: underline;
+}
+
+code {
+  display: block;
+  background: #1a1a2e;
+  border: 1px solid #2a2a3e;
+  border-radius: 8px;
+  padding: 0.7rem 1rem;
+  font-family: "JetBrains Mono", "Fira Code", "Consolas", monospace;
+  font-size: 0.85rem;
+  color: #c4f0a0;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.note {
+  background: #1a1a1a;
+  border-left: 3px solid #60a5fa;
+  padding: 0.6rem 1rem;
+  font-size: 0.82rem;
+  color: #a3a3a3;
+  border-radius: 0 6px 6px 0;
+  margin-top: 0.3rem;
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid #222;
+  margin: 2rem 0;
+}
+
+.step-number {
+  display: inline-block;
+  background: #60a5fa;
+  color: #0a0a0a;
+  font-weight: 700;
+  font-size: 0.75rem;
+  width: 22px;
+  height: 22px;
+  line-height: 22px;
+  text-align: center;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+}
