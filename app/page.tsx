@@ -1,3 +1,5 @@
+import { CopyButton } from "./copy-button";
+
 export default function Page() {
   return (
     <div className="page-wrapper">
@@ -44,6 +46,7 @@ export default function Page() {
             Claude 콘솔에서 API 키를 생성하고 안전한 곳에 저장하세요.
           </div>
           <div className="code-block">
+            <CopyButton text="https://platform.claude.com/" />
             <code>
               <a href="https://platform.claude.com/" target="_blank" rel="noopener noreferrer">
                 https://platform.claude.com/
@@ -59,6 +62,7 @@ export default function Page() {
             Telegram에서 @BotFather를 검색하여 새 봇을 만들고 API 토큰을 저장하세요.
           </div>
           <div className="code-block">
+            <CopyButton text={`/start\n/newbot`} />
             <code>{`/start
 /newbot
 > 봇 이름 설정 후 발급된 API 토큰 저장`}</code>
@@ -72,6 +76,7 @@ export default function Page() {
             Node Version Manager를 설치한 후 Node.js 24 버전을 셋업합니다.
           </div>
           <div className="code-block">
+            <CopyButton text={`curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.4/install.sh | bash\n\nsource ~/.bashrc\n\nnvm --version\n\nnvm install 24\nnvm use 24`} />
             <code>{`# nvm 설치
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.4/install.sh | bash
 
@@ -104,6 +109,7 @@ nvm use 24`}</code>
           <span className="step-number">1</span>
           <div className="step-title">OpenClaw 설치</div>
           <div className="code-block">
+            <CopyButton text="npm i -g openclaw@latest" />
             <code>npm i -g openclaw@latest</code>
           </div>
         </div>
@@ -115,6 +121,7 @@ nvm use 24`}</code>
             온보딩 과정에서 Claude API 키를 입력하세요.
           </div>
           <div className="code-block">
+            <CopyButton text="openclaw onboard --install-daemon" />
             <code>openclaw onboard --install-daemon</code>
           </div>
         </div>
@@ -138,6 +145,7 @@ nvm use 24`}</code>
             TUI에서 hatch를 실행하거나, Control UI 대시보드에서 실행할 수 있습니다.
           </div>
           <div className="code-block">
+            <CopyButton text="http://127.0.0.1:18789/" />
             <code>{`# Control UI 대시보드 접속
 http://127.0.0.1:18789/`}</code>
           </div>
@@ -148,6 +156,7 @@ http://127.0.0.1:18789/`}</code>
             </span>
           </div>
           <div className="code-block" style={{ marginTop: '0.4rem' }}>
+            <CopyButton text="openclaw agents add main" />
             <code>openclaw agents add main</code>
           </div>
         </div>
@@ -172,6 +181,7 @@ http://127.0.0.1:18789/`}</code>
             OpenClaw에 자연어로 명령하여 CoinFello 스킬을 설치합니다.
           </div>
           <div className="prompt-block">
+            <CopyButton text="coinfello skill을 clawhub에서 찾아서 설치해줘" />
             coinfello skill을 clawhub에서 찾아서 설치해줘
           </div>
         </div>
@@ -183,6 +193,7 @@ http://127.0.0.1:18789/`}</code>
             DeFi 트랜잭션을 위한 스마트 계정을 생성합니다.
           </div>
           <div className="prompt-block">
+            <CopyButton text="create_account 만들어줘" />
             create_account 만들어줘
           </div>
         </div>
@@ -194,6 +205,7 @@ http://127.0.0.1:18789/`}</code>
             생성된 스마트 계정 주소로 사용할 체인에 자금을 송금합니다.
           </div>
           <div className="prompt-block">
+            <CopyButton text="base network에 1 USDC 송금해줘" />
             base network에 1 USDC 송금해줘
           </div>
           <div className="note warning">
@@ -211,6 +223,7 @@ http://127.0.0.1:18789/`}</code>
             자연어 명령으로 토큰 간 스왑을 실행합니다.
           </div>
           <div className="prompt-block">
+            <CopyButton text="USDC를 USDT로 스왑해줘" />
             USDC를 USDT로 스왑해줘
           </div>
         </div>
@@ -222,6 +235,7 @@ http://127.0.0.1:18789/`}</code>
             CoinFello가 최적의 예치 풀을 탐색하고 자동으로 리밸런싱하도록 설정합니다.
           </div>
           <div className="prompt-block">
+            <CopyButton text="base에서 갖고있는 USDC를 리밸런싱하고 싶은데, coinfello에서 적당한 예치풀을 찾아서 매일 오전 9시에 자동으로 리밸런싱해줘" />
             base에서 갖고있는 USDC를 리밸런싱하고 싶은데, coinfello에서 적당한 예치풀을 찾아서 매일 오전 9시에 자동으로 리밸런싱해줘
           </div>
         </div>
@@ -246,6 +260,7 @@ http://127.0.0.1:18789/`}</code>
             BotFather에서 생성한 봇의 아이디로 텔레그램에서 접속 후 시작합니다.
           </div>
           <div className="code-block">
+            <CopyButton text="/start" />
             <code>/start</code>
           </div>
         </div>
@@ -257,6 +272,7 @@ http://127.0.0.1:18789/`}</code>
             OpenClaw 터미널에서 텔레그램 페어링을 승인합니다.
           </div>
           <div className="code-block">
+            <CopyButton text="openclaw pairing approve telegram [페어링코드]" />
             <code>openclaw pairing approve telegram [페어링코드]</code>
           </div>
           <div className="note">
@@ -272,6 +288,7 @@ http://127.0.0.1:18789/`}</code>
             텔레그램에서 자연어로 명령을 보내 정상 동작을 확인합니다.
           </div>
           <div className="prompt-block">
+            <CopyButton text="coinfello를 통해서 현재 DeFi 예치 현황 확인해줘" />
             coinfello를 통해서 현재 DeFi 예치 현황 확인해줘
           </div>
         </div>
