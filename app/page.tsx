@@ -5,34 +5,34 @@ export default function Page() {
     <div className="page-wrapper">
       {/* Header */}
       <header className="header">
-        <div className="header-badge">Setup Guide</div>
-        <h1>OpenClaw + CoinFello</h1>
-        <p>
-          AI 에이전트 기반 DeFi 자동화 세팅 가이드.
+        <img src="/logo.png" alt="CoinFello" className="header-logo" />
+        <p className="header-tagline">
+          AI 에이전트 기반 DeFi 자동화 세팅 가이드<br />
           환경설정부터 텔레그램 연동까지 단계별로 안내합니다.
         </p>
+        <div className="header-badge">Setup Guide</div>
       </header>
 
       {/* Phase Navigation */}
       <nav className="phase-nav">
         <div className="phase-nav-item">
-          <span className="phase-icon">1</span> 환경세팅
+          <span className="phase-num">1</span> 환경세팅
         </div>
         <div className="phase-nav-item">
-          <span className="phase-icon">2</span> OpenClaw
+          <span className="phase-num">2</span> OpenClaw
         </div>
         <div className="phase-nav-item">
-          <span className="phase-icon">3</span> CoinFello
+          <span className="phase-num">3</span> CoinFello
         </div>
         <div className="phase-nav-item">
-          <span className="phase-icon">4</span> Telegram
+          <span className="phase-num">4</span> Telegram
         </div>
       </nav>
 
       {/* ── Section 1: 환경세팅 ── */}
       <section className="section">
         <div className="section-header">
-          <div className="section-icon env">1</div>
+          <div className="section-num">1</div>
           <div>
             <div className="section-title">환경세팅</div>
             <div className="section-subtitle">API 키 발급 및 Node.js 설치</div>
@@ -98,7 +98,7 @@ nvm use 24`}</code>
       {/* ── Section 2: OpenClaw ── */}
       <section className="section">
         <div className="section-header">
-          <div className="section-icon openclaw">2</div>
+          <div className="section-num">2</div>
           <div>
             <div className="section-title">OpenClaw</div>
             <div className="section-subtitle">AI 에이전트 프레임워크 설치 및 설정</div>
@@ -155,7 +155,7 @@ http://127.0.0.1:18789/`}</code>
               API 등록이 안 될 경우 아래 명령어로 에이전트를 수동 추가하세요.
             </span>
           </div>
-          <div className="code-block" style={{ marginTop: '0.4rem' }}>
+          <div className="code-block" style={{ marginTop: '0.5rem' }}>
             <CopyButton text="openclaw agents add main" />
             <code>openclaw agents add main</code>
           </div>
@@ -167,7 +167,7 @@ http://127.0.0.1:18789/`}</code>
       {/* ── Section 3: CoinFello ── */}
       <section className="section">
         <div className="section-header">
-          <div className="section-icon coinfello">3</div>
+          <div className="section-num">3</div>
           <div>
             <div className="section-title">CoinFello</div>
             <div className="section-subtitle">DeFi 에이전트 스킬 설치 및 활용</div>
@@ -182,7 +182,8 @@ http://127.0.0.1:18789/`}</code>
           </div>
           <div className="prompt-block">
             <CopyButton text="coinfello skill을 clawhub에서 찾아서 설치해줘" />
-            coinfello skill을 clawhub에서 찾아서 설치해줘
+            <div className="prompt-label">Prompt</div>
+            <div className="prompt-text">coinfello skill을 clawhub에서 찾아서 설치해줘</div>
           </div>
         </div>
 
@@ -194,7 +195,8 @@ http://127.0.0.1:18789/`}</code>
           </div>
           <div className="prompt-block">
             <CopyButton text="create_account 만들어줘" />
-            create_account 만들어줘
+            <div className="prompt-label">Prompt</div>
+            <div className="prompt-text">create_account 만들어줘</div>
           </div>
         </div>
 
@@ -206,7 +208,8 @@ http://127.0.0.1:18789/`}</code>
           </div>
           <div className="prompt-block">
             <CopyButton text="base network에 1 USDC 송금해줘" />
-            base network에 1 USDC 송금해줘
+            <div className="prompt-label">Prompt</div>
+            <div className="prompt-text">base network에 1 USDC 송금해줘</div>
           </div>
           <div className="note warning">
             <span className="note-icon">!</span>
@@ -224,7 +227,8 @@ http://127.0.0.1:18789/`}</code>
           </div>
           <div className="prompt-block">
             <CopyButton text="USDC를 USDT로 스왑해줘" />
-            USDC를 USDT로 스왑해줘
+            <div className="prompt-label">Prompt</div>
+            <div className="prompt-text">USDC를 USDT로 스왑해줘</div>
           </div>
         </div>
 
@@ -236,7 +240,8 @@ http://127.0.0.1:18789/`}</code>
           </div>
           <div className="prompt-block">
             <CopyButton text="base에서 갖고있는 USDC를 리밸런싱하고 싶은데, coinfello에서 적당한 예치풀을 찾아서 매일 오전 9시에 자동으로 리밸런싱해줘" />
-            base에서 갖고있는 USDC를 리밸런싱하고 싶은데, coinfello에서 적당한 예치풀을 찾아서 매일 오전 9시에 자동으로 리밸런싱해줘
+            <div className="prompt-label">Prompt</div>
+            <div className="prompt-text">base에서 갖고있는 USDC를 리밸런싱하고 싶은데, coinfello에서 적당한 예치풀을 찾아서 매일 오전 9시에 자동으로 리밸런싱해줘</div>
           </div>
         </div>
       </section>
@@ -246,7 +251,7 @@ http://127.0.0.1:18789/`}</code>
       {/* ── Section 4: Telegram 연동 ── */}
       <section className="section">
         <div className="section-header">
-          <div className="section-icon telegram">4</div>
+          <div className="section-num">4</div>
           <div>
             <div className="section-title">Telegram 연동</div>
             <div className="section-subtitle">봇 페어링 및 동작 확인</div>
@@ -289,16 +294,16 @@ http://127.0.0.1:18789/`}</code>
           </div>
           <div className="prompt-block">
             <CopyButton text="coinfello를 통해서 현재 DeFi 예치 현황 확인해줘" />
-            coinfello를 통해서 현재 DeFi 예치 현황 확인해줘
+            <div className="prompt-label">Prompt</div>
+            <div className="prompt-text">coinfello를 통해서 현재 DeFi 예치 현황 확인해줘</div>
           </div>
         </div>
       </section>
 
       {/* Footer */}
       <footer className="footer">
-        <p>
-          OpenClaw + CoinFello Setup Guide
-        </p>
+        <img src="/logo.png" alt="CoinFello" className="footer-logo" />
+        <p>OpenClaw + CoinFello Setup Guide</p>
       </footer>
     </div>
   );
